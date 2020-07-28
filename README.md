@@ -13,7 +13,9 @@ The rules of the game are as follows:
 3) Any live cell with more than three live neighbours dies, as if by overpopulation.
 4) Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
-*The Game of Life is undecidable, which means that given an initial pattern and a later pattern, no algorithm exists that can tell whether the later pattern is ever going to appear. This is a corollary of the halting problem: the problem of determining whether a given program will finish running or continue to run forever from an initial input.*
+**The Game of Life is undecidable, which means that given an initial pattern and a later pattern, no algorithm exists that can tell whether the later pattern is ever going to appear. This is a corollary of the halting problem: the problem of determining whether a given program will finish running or continue to run forever from an initial input.**
+
+**For more information and interesting patterns to use: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life **  
 
 **_conway.py_** :
 
