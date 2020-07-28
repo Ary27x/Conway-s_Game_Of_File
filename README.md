@@ -15,7 +15,7 @@ The rules of the game are as follows:
 
 **The Game of Life is undecidable, which means that given an initial pattern and a later pattern, no algorithm exists that can tell whether the later pattern is ever going to appear. This is a corollary of the halting problem: the problem of determining whether a given program will finish running or continue to run forever from an initial input.**
 
-**For more information and interesting patterns to use: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life **  
+**For more information and interesting patterns to use: https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life**  
 
 **_conway.py_** :
 
