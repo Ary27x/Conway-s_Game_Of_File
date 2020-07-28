@@ -10,6 +10,10 @@ c = int(input('Choose Display:\n1) Continuos\n2) Non-Continuos\n\n'))
 d = False
 if c == 1:
     d = True
+if i > 35:
+    i = 35
+if j > 100:
+    j = 100    
 main_array = [[0 for temp_j in range(j)] for temp_i in range(i)]
 # Rule 1: any live cell with two or three n's survive
 # Rule 2: any dead cell with three live n's becomes a live cell
@@ -144,18 +148,31 @@ def setup():
         print('Enter Starting Alive Cell Position: (Max: {},{}), (Enter "+" To Insert Random Live Cells), (Leave Blank When Done) '.format(i-1,j-1))
         try:
             x = input('Position X-Axis: ')
+            
+
             if x == '':
                 break
             if x == '+':
                 tmp = int(input('Enter Number Of Cells: '))
+                if tmp > ((i-1)*(j-1)):
+                    temp = (i-1) * (j-1)
+                print("Insertion Started")
                 for temp_v in range(tmp):
-                    main_array[random.randint(0, i-1)][random.randint(0, j-1)] = 1
+                    main_array[random.randint(0, i-1) ][random.randint(0, j-1) ] = 1
                 os.system('cls')
                 p_array()
                 input('Insertion Done')
                 break
-            y = input('Position Y-Axis: ')
-            main_array[int(x)][int(y)] = 1
+            x = int(x)
+            if x >= i:
+                input('Enter A Value Less Than {}\n'.format(i))
+                continue
+            y = int(input('Position Y-Axis: '))
+            if y >= j:
+                input('Enter A Value Less Than {}\n'.format(j))
+                continue
+            
+            main_array[x][y] = 1
             
         except:
             pass
@@ -174,7 +191,7 @@ def home():
             if x == '+':
                 reset()
                 start()
-        
+                return
 
         check()
 
